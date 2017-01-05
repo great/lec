@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+# pyenv
+PYENV="/usr/local/bin/pyenv"
+if [ -f $PYENV ]; then
+	export PYENV_ROOT=$HOME/.pyenv
+	export PATH=$PYENV_ROOT/bin:$PATH
+
+	eval "$(pyenv init -)"
+	eval "$(pyenv virtualenv-init -)"
+else
+	echo "There's no pyenv yet."
+	echo "Try 'brew install pyenv'"
+fi
+
+
+# autoenv
+#AUTOENV="/usr/local/opt/autoenv/activate.sh"
+#if [ -f $AUTOENV ]; then
+#	source $AUTOENV
+#else
+#	echo "There's no autoenv yet."
+#	echo "Try 'brew install autoenv'"
+#fi
+
