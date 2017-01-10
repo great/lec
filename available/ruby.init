@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+# rbenv
+RBENV="/usr/local/bin/rbenv"
+if [ -f $RBENV ]; then
+
+	eval "$(rbenv init -)"
+else
+	echo "There's no rbenv yet."
+	echo "Try 'brew install rbenv'"
+fi
